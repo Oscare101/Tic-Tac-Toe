@@ -69,9 +69,20 @@ export default function App() {
   const cross = <AntDesign name="plus" size={130} color="black" />
 
   const check = () => {
-    if (a12 === cross) {
-      console.log('cross')
-    }
+    console.log({ a12 })
+  }
+
+  const repeat = () => {
+    setA11()
+    setA12()
+    setA13()
+    setA21()
+    setA22()
+    setA23()
+    setA31()
+    setA32()
+    setA33()
+    setPlayer('cross')
   }
 
   return (
@@ -88,7 +99,24 @@ export default function App() {
         >
           Your step
         </Text>
+        <TouchableOpacity onPress={() => repeat()}>
+          <View
+            style={{
+              backgroundColor: '#56ABD9',
+              padding: 2,
+              borderRadius: 10,
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: 90,
+              height: 30,
+              alignSelf: 'center',
+            }}
+          >
+            <Feather name="repeat" size={24} color="black" />
+          </View>
+        </TouchableOpacity>
       </View>
+
       <View style={styles.playArea}>
         <View
           style={{
@@ -289,6 +317,22 @@ export default function App() {
         >
           Your step
         </Text>
+        <TouchableOpacity onPress={() => repeat()}>
+          <View
+            style={{
+              backgroundColor: '#56ABD9',
+              padding: 2,
+              borderRadius: 10,
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: 90,
+              height: 30,
+              alignSelf: 'center',
+            }}
+          >
+            <Feather name="repeat" size={30} color="black" />
+          </View>
+        </TouchableOpacity>
       </View>
     </View>
   )
@@ -300,6 +344,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'space-evenly',
+    paddingVertical: 30,
   },
   playArea: {
     width: width * 0.95,
@@ -322,7 +367,6 @@ const styles = StyleSheet.create({
   cell: {
     width: width * 0.3,
     height: width * 0.3,
-    backgroundColor: '#11ff1111',
     alignItems: 'center',
     justifyContent: 'center',
     transform: [{ rotate: '45deg' }],

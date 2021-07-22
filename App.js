@@ -69,7 +69,7 @@ export default function App() {
   const cross = <AntDesign name="plus" size={130} color="black" />
 
   const check = () => {
-    console.log({ a12 })
+    console.log({ a11, a12, a13, a21, a22, a23, a31, a32, a33 })
   }
 
   const repeat = () => {
@@ -146,6 +146,7 @@ export default function App() {
                     setPlayer('circle')
                   }
                 }
+                check()
               }}
             >
               <View style={styles.cell}>{a11}</View>
@@ -179,6 +180,7 @@ export default function App() {
                     setPlayer('circle')
                   }
                 }
+                check()
               }}
             >
               <View style={styles.cell}>{a13}</View>
@@ -204,6 +206,7 @@ export default function App() {
                     setPlayer('circle')
                   }
                 }
+                check()
               }}
             >
               <View style={styles.cell}>{a21}</View>
@@ -236,6 +239,7 @@ export default function App() {
                     setPlayer('circle')
                   }
                 }
+                check()
               }}
             >
               <View style={styles.cell}>{a23}</View>
@@ -261,6 +265,7 @@ export default function App() {
                     setPlayer('circle')
                   }
                 }
+                check()
               }}
             >
               <View style={styles.cell}>{a31}</View>
@@ -277,6 +282,7 @@ export default function App() {
                     setPlayer('circle')
                   }
                 }
+                check()
               }}
             >
               <View style={styles.cell}>{a32}</View>
@@ -293,6 +299,7 @@ export default function App() {
                     setPlayer('circle')
                   }
                 }
+                check()
               }}
             >
               <View style={styles.cell}>{a33}</View>
